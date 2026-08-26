@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700&family=Inter:wght@700;800;900&family=Roboto+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -65,54 +65,54 @@
     .hero {
       text-align: left;
     }
-    .pink-headline {
-  color: var(--pink);
-}
 
     .eyebrow {
-  display: inline-block;
-  margin: 0 0 18px;
-  padding: 4px 8px;
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 0;
 
-  font-family:
-    Inter,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
+      font-family: "Roboto Mono", monospace;
+      font-size: 15px;
+      line-height: 1.4;
+      font-weight: 500;
+      letter-spacing: 0.02em;
 
-  font-size: 16px;
-  line-height: 1;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+      text-transform: none;
+      color: #686868;
+      background: none;
+    }
 
-  color: #ffffff;
-  background: var(--pink);
-}
     h1 {
       max-width: 900px;
       margin: 0 auto;
 
-      font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+      font-family: "Archivo", sans-serif;
 
-      font-size: clamp(52px, 6vw, 86px);
-      line-height: 0.94;
-      font-weight: 850;
-      letter-spacing: -0.055em;
+      font-size: clamp(48px, 5.5vw, 78px);
+      line-height: 1.02;
+      font-weight: 700;
+      letter-spacing: -0.045em;
       text-transform: uppercase;
-      color: #393939;
+
+      color: #111111;
+    }
+
+    .pink-underline {
+      position: relative;
+      display: inline;
+      color: inherit;
+      z-index: 0;
+    }
+
+    .pink-underline::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 6px;
+      background: var(--pink);
+      z-index: -1;
     }
 
     .main-rule {
@@ -354,7 +354,7 @@
       }
 
       h1 {
-        font-size: clamp(50px, 11vw, 76px);
+        font-size: clamp(46px, 10vw, 70px);
       }
     }
 
@@ -369,13 +369,18 @@
       }
 
       .eyebrow {
-        font-size: 14px;
+        font-size: 13px;
       }
 
       h1 {
-        font-size: clamp(42px, 12.7vw, 60px);
-        line-height: 0.95;
-        letter-spacing: -0.06em;
+        font-size: clamp(39px, 11.5vw, 56px);
+        line-height: 1;
+        letter-spacing: -0.045em;
+      }
+
+      .pink-underline::after {
+        bottom: -2px;
+        height: 4px;
       }
 
       .main-rule {
@@ -426,10 +431,13 @@
           For Founder CEOs
         </p>
 
-       <h1>
-  You've Built The Product.<br>
-  Time To Build The <span class="pink-headline"> Revenue Streams </span> That <span class="pink-headline"> Make The Business.</span>
-</h1>
+        <h1>
+          You've Built The Product.<br>
+          Time To Build The
+          <span class="pink-underline">Revenue Streams</span>
+          That
+          <span class="pink-underline">Make The Business.</span>
+        </h1>
 
       </section>
 
