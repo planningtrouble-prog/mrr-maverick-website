@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>MRR Maverick | For Founder CEOs</title>
+
+  <meta
+    name="description"
+    content="You've built the product. Now build the recurring revenue that makes the business."
+  />
+
+  <!-- Temporary holding page: prevent indexing -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Oswald:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #3e3e3e;
+      --muted: #6b6b6b;
+      --pink: #ef1760;
+      --rule: #4b4b4b;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Roboto Mono", monospace;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--pink);
+      color: white;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 64px 0 36px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.35fr) minmax(330px, 0.75fr);
+      gap: 82px;
+      align-items: start;
+    }
+
+    /* =========================
+       LEFT COLUMN
+    ========================= */
+
+    .eyebrow {
+      margin: 0 0 15px;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-size: 17px;
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #686868;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-size: clamp(54px, 6.4vw, 92px);
+      line-height: 0.94;
+      font-weight: 850;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+      color: #393939;
+    }
+
+    .main-rule {
+      width: 100%;
+      height: 4px;
+      margin: 34px 0 34px;
+      background: var(--rule);
+    }
+
+    .copy {
+      max-width: 760px;
+    }
+
+    .copy p {
+      margin: 0 0 25px;
+      font-size: 17px;
+      line-height: 1.72;
+      letter-spacing: -0.01em;
+    }
+
+    .copy .pink {
+      color: var(--pink);
+      font-weight: 700;
+    }
+
+    .copy .strong {
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .copy .spaced {
+      margin-top: 34px;
+    }
+
+    /* =========================
+       RIGHT COLUMN / FORM
+    ========================= */
+
+    .form-panel {
+      padding-top: 6px;
+    }
+
+    .form-rule {
+      height: 3px;
+      width: 100%;
+      background: var(--rule);
+      margin-bottom: 31px;
+    }
+
+    .form-intro {
+      margin: 0 0 40px;
+      max-width: 330px;
+
+      color: var(--pink);
+      font-size: 17px;
+      line-height: 1.55;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .field {
+      margin-bottom: 24px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+
+      font-size: 13px;
+      line-height: 1.3;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    input {
+      width: 100%;
+      min-height: 62px;
+      padding: 0 18px;
+
+      border: 2px solid #666;
+      border-radius: 0;
+
+      background: rgba(255, 255, 255, 0.36);
+      color: var(--text);
+
+      font-family: "Roboto Mono", monospace;
+      font-size: 15px;
+
+      outline: none;
+
+      transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    input::placeholder {
+      color: #888;
+    }
+
+    input:focus {
+      border-color: var(--pink);
+      background: var(--white);
+      box-shadow: 5px 5px 0 rgba(239, 23, 96, 0.12);
+    }
+
+    button {
+      width: 100%;
+      min-height: 78px;
+      margin-top: 8px;
+      padding: 18px 22px;
+
+      border: 2px solid var(--pink);
+      border-radius: 0;
+
+      background: var(--pink);
+      color: #fff;
+
+      font-family: "Roboto Mono", monospace;
+      font-size: 16px;
+      line-height: 1.45;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      cursor: pointer;
+
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease,
+        box-shadow 0.15s ease;
+    }
+
+    button:hover {
+      background: transparent;
+      color: var(--pink);
+      transform: translate(-3px, -3px);
+      box-shadow: 6px 6px 0 var(--pink);
+    }
+
+    button:active {
+      transform: translate(0, 0);
+      box-shadow: none;
+    }
+
+    button:disabled {
+      cursor: wait;
+      opacity: 0.6;
+    }
+
+    .bottom-rule {
+      height: 3px;
+      background: var(--rule);
+      margin: 37px 0 29px;
+    }
+
+    .fine-print {
+      margin: 0;
+
+      font-size: 13px;
+      line-height: 1.7;
+      color: #4d4d4d;
+    }
+
+    .error {
+      display: none;
+      margin: 16px 0 0;
+
+      color: var(--pink);
+      font-size: 12px;
+      line-height: 1.6;
+      font-weight: 700;
+    }
+
+    .error.visible {
+      display: block;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      margin-top: 56px;
+    }
+
+    .footer-top {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 10px;
+    }
+
+    .brand {
+      flex: 0 0 auto;
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+      font-size: 18px;
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+    }
+
+    .footer-line {
+      height: 1px;
+      flex: 1;
+      max-width: 360px;
+      background: #727272;
+    }
+
+    .copyright {
+      color: #8a8a8a;
+      font-size: 10px;
+      line-height: 1.4;
+    }
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 880px) {
+
+      .page {
+        width: min(100% - 34px, 700px);
+        padding-top: 42px;
+      }
+
+      .layout {
+        grid-template-columns: 1fr;
+        gap: 58px;
+      }
+
+      h1 {
+        font-size: clamp(54px, 13vw, 82px);
+      }
+
+      .form-panel {
+        padding-top: 0;
+      }
+
+      .form-intro {
+        max-width: 100%;
+      }
+
+      footer {
+        margin-top: 65px;
+      }
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 520px) {
+
+      .page {
+        width: calc(100% - 30px);
+        padding-top: 34px;
+      }
+
+      .eyebrow {
+        font-size: 14px;
+      }
+
+      h1 {
+        font-size: clamp(43px, 13vw, 62px);
+        line-height: 0.95;
+        letter-spacing: -0.06em;
+      }
+
+      .main-rule {
+        margin: 27px 0 29px;
+      }
+
+      .copy p {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .layout {
+        gap: 48px;
+      }
+
+      input {
+        min-height: 58px;
+      }
+
+      button {
+        min-height: 74px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <div class="page">
+
+    <div class="layout">
+
+
+      <!-- =========================
+           LEFT COLUMN
+      ========================== -->
+
+      <main>
+
+        <p class="eyebrow">
+          For Founder CEOs
+        </p>
+
+
+        <h1>
+          You've Built<br>
+          The Product.<br>
+          Now Build The<br>
+          Recurring Revenue<br>
+          That Makes<br>
+          The Business.
+        </h1>
+
+
+        <div class="main-rule"></div>
+
+
+        <section class="copy">
+
+          <p>
+            If you're here, you've likely built something that people
+            already pay for.<br>
+            <span class="pink">
+              Awesome product — check ✔
+            </span>
+          </p>
+
+
+          <p>
+            The problem is what's asked of you next:
+            Turning commercial traction into scalable revenue streams
+            and ultimately a business capable of a high-multiple exit.
+          </p>
+
+
+          <p class="pink spaced">
+            That's where we come in.
+          </p>
+
+
+          <p class="spaced">
+            And you're right — this is exactly where you should be
+            seeing sales copy or a video sales letter!
+          </p>
+
+
+          <p>
+            The reason you are not seeing either is that we are in the
+            process of making changes to the way we work with and
+            deliver for you.
+          </p>
+
+
+          <p>
+            We built the new offer to deliver a whole new level of ROI
+            to you — and we can't wait to share it with you!
+          </p>
+
+        </section>
+
+      </main>
+
+
+
+      <!-- =========================
+           RIGHT COLUMN / FORM
+      ========================== -->
+
+      <aside class="form-panel">
+
+        <div class="form-rule"></div>
+
+
+        <p class="form-intro">
+          Enter your email below to be notified when the new offer goes live.
+        </p>
+
+
+      
+
+
+        <form
+          id="leadForm"
+          action="https://formsubmit.co/cooper@mrrmaverick.com"
+          method="POST"
+        >
+
+
+          <!-- FormSubmit settings -->
+
+          <input
+            type="hidden"
+            name="_subject"
+            value="New MRR Maverick Offer Lead"
+          >
+
+
+          <input
+            type="hidden"
+            name="_template"
+            value="table"
+          >
+
+
+          <input
+            type="hidden"
+            name="_captcha"
+            value="false"
+          >
+
+
+          <!-- Honeypot spam protection -->
+
+          <input
+            type="text"
+            name="_honey"
+            style="display:none"
+            tabindex="-1"
+            autocomplete="off"
+          >
+
+
+
+          <!-- FIRST NAME -->
+
+          <div class="field">
+
+            <label for="firstName">
+              First Name
+            </label>
+
+            <input
+              id="firstName"
+              name="First Name"
+              type="text"
+              placeholder="First name"
+              autocomplete="given-name"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- LAST NAME -->
+
+          <div class="field">
+
+            <label for="lastName">
+              Last Name
+            </label>
+
+            <input
+              id="lastName"
+              name="Last Name"
+              type="text"
+              placeholder="Last name"
+              autocomplete="family-name"
+              required
+            >
+
+          </div>
+
+
+
+          <!-- WORK EMAIL -->
+
+          <div class="field">
+
+            <label for="email">
+              Work Email
+            </label>
+
+            <input
+              id="email"
+              name="Work Email"
+              type="email"
+              placeholder="you@company.com"
+              autocomplete="email"
+              inputmode="email"
+              required
+            >
+
+          </div>
+          <p class="fine-print">
+          Work email required. Gmail, Yahoo, Outlook and role addresses are filtered automatically.
+        </p>
+
+          
+
+
+
+          <!-- CTA -->
+
+          <button
+            id="submitButton"
+            type="submit"
+          >
+            Notify Me When<br>
+            The Offer Goes Live!
+          </button>
+
+
+
+          <!-- ERROR -->
+
+          <p
+            id="emailError"
+            class="error"
+          >
+            Please use a work email address.
+            Personal email providers and role-based addresses
+            aren't accepted.
+          </p>
+
+        </form>
+
+
+
+    
+
+      </aside>
+
+    </div>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+      <div class="footer-top">
+
+        <div class="brand">
+          MRR Maverick
+        </div>
+
+        <div class="footer-line"></div>
+
+      </div>
+
+
+      <div class="copyright">
+        © <span id="year"></span> MRR Maverick. All rights reserved.
+      </div>
+
+    </footer>
+
+  </div>
+
+
+
+  <script>
+
+    const form =
+      document.getElementById("leadForm");
+
+    const emailInput =
+      document.getElementById("email");
+
+    const emailError =
+      document.getElementById("emailError");
+
+    const submitButton =
+      document.getElementById("submitButton");
+
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+
+    /*
+      ==============================
+      PERSONAL EMAIL PROVIDERS
+      ==============================
+    */
+
+    const blockedDomains = new Set([
+
+      "gmail.com",
+      "googlemail.com",
+
+      "yahoo.com",
+      "yahoo.de",
+      "yahoo.co.uk",
+
+      "hotmail.com",
+      "hotmail.de",
+      "hotmail.co.uk",
+
+      "outlook.com",
+      "outlook.de",
+
+      "live.com",
+      "live.de",
+
+      "icloud.com",
+      "me.com",
+      "mac.com",
+
+      "aol.com",
+
+      "gmx.com",
+      "gmx.de",
+      "gmx.net",
+
+      "web.de",
+
+      "mail.com",
+
+      "proton.me",
+      "protonmail.com",
+
+      "t-online.de"
+
+    ]);
+
+
+
+    /*
+      ==============================
+      ROLE-BASED EMAIL ADDRESSES
+      ==============================
+
+      Examples blocked:
+
+      info@company.com
+      sales@company.com
+      marketing@company.com
+      support@company.com
+    */
+
+    const blockedRoles = new Set([
+
+      "admin",
+      "billing",
+      "business",
+      "careers",
+      "contact",
+      "customerservice",
+      "enquiries",
+      "hello",
+      "help",
+      "hr",
+      "info",
+      "jobs",
+      "mail",
+      "marketing",
+      "office",
+      "press",
+      "reception",
+      "sales",
+      "service",
+      "support",
+      "team"
+
+    ]);
+
+
+
+    /*
+      ==============================
+      VALIDATE WORK EMAIL
+      ==============================
+    */
+
+    function isValidWorkEmail(email) {
+
+      const normalized =
+        email.trim().toLowerCase();
+
+
+      const parts =
+        normalized.split("@");
+
+
+      if (parts.length !== 2) {
+        return false;
+      }
+
+
+      const localPart =
+        parts[0];
+
+
+      const domain =
+        parts[1];
+
+
+      if (!localPart || !domain) {
+        return false;
+      }
+
+
+
+      /*
+        Block personal email domains
+      */
+
+      if (blockedDomains.has(domain)) {
+        return false;
+      }
+
+
+
+      /*
+        Normalize role addresses.
+
+        These:
+
+        customer-service@
+        customer_service@
+        customer.service@
+
+        all become:
+
+        customerservice
+      */
+
+      const normalizedLocal =
+        localPart.replace(/[._-]/g, "");
+
+
+      if (blockedRoles.has(normalizedLocal)) {
+        return false;
+      }
+
+
+      return true;
+
+    }
+
+
+
+    /*
+      ==============================
+      CLEAR ERROR WHEN EDITING
+      ==============================
+    */
+
+    emailInput.addEventListener(
+      "input",
+      function () {
+
+        emailInput.setCustomValidity("");
+
+        emailError.classList.remove("visible");
+
+      }
+    );
+
+
+
+    /*
+      ==============================
+      FORM SUBMISSION
+      ==============================
+    */
+
+    form.addEventListener(
+      "submit",
+      function (event) {
+
+
+        if (!isValidWorkEmail(emailInput.value)) {
+
+          event.preventDefault();
+
+
+          emailInput.setCustomValidity(
+            "Please enter your work email address."
+          );
+
+
+          emailInput.reportValidity();
+
+
+          emailError.classList.add("visible");
+
+
+          return;
+
+        }
+
+
+
+        emailInput.setCustomValidity("");
+
+
+        submitButton.disabled = true;
+
+
+        submitButton.innerHTML =
+          "Submitting...";
+
+      }
+    );
+
+  </script>
+
+</body>
+</html>
